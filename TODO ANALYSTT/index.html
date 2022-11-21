@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TODO App</title>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
+
+<header class="page-title">
+  <h1>  <i class="material-icons">view_list</i>
+        TODO</h1>
+  <div class="tag"> An easy way to manage your work. <span class="caret">|</span></div>
+</header>
+
+<main role="main" class="main-wrap hidden">
+
+  <header role="heading" class="header">
+    <h1 class="app-header"> Add your task </h1>
+  </header>
+
+  <section class="main-content">
+    <section class="todo-form">
+
+      <form role="form" id="todoForm">
+        <div class="row">
+          <label for="title"> Title </label>
+          <input class="form-input" id="title" type="text" placeholder="Learn JavaScript" />
+        </div>
+
+        <div class="row">
+          <label for="description"> Description </label>
+          <textarea id="description" rows="4" cols="30" placeholder="Coz you already know Java"></textarea>
+        </div>
+
+        <div class="row">
+          <label for="priority"> Priority </label>
+          <select id="priority">
+            <option value="high">High</option>
+            <option value="med">Medium</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+
+        <div class="row submit-btn">
+          <input type="submit" class="primary-button" value="DO IT" />
+        </div>
+      </form>
+
+    </section>
+
+
+  </section>
+</main>
+
+<section class="todo-list-container">
+  <div class="todo-in-progress">
+    <h2> Working tasks</h2>
+    <ul ondragstart="" class="todo-list" id="target">
+
+
+      <li draggable="true" class="todo-item high">
+        <div class="card">
+
+          <h3 class="todo-title"> 
+            <span class="action">
+              <i class="material-icons md-36 icon-delete">delete</i>
+              <i class="icon-checkbox-outline material-icons md-36 md-dark">check_box_outline_blank</i>
+              <i class="icon-checkbox material-icons md-36 md-light">check_box</i>
+            </span> 
+          <span class="title">Learn React </span></h3>
+
+          <p class="todo-description">
+
+            Build great modularize javascript apps with React JS. </p>
+          <span class="todo-priority"> High </span>
+
+        </div>
+
+      </li>
+
+      <li draggable="true" class="todo-item high">
+        <div class="card">
+
+          <h3 class="todo-title"> <span class="action">
+          <i class="material-icons md-36 icon-delete">delete</i>
+                    <i class="icon-checkbox-outline material-icons md-36 md-dark">check_box_outline_blank</i>
+                    <i class="icon-checkbox material-icons md-36 md-light">check_box</i>
+                  </span> 
+          <span class="title">Learn node.js</span></h3>
+
+          <p class="todo-description">
+
+            Build great modularize javascript apps with this </p>
+          <span class="todo-priority"> High </span>
+
+        </div>
+
+      </li>
+      <li draggable="true" class="todo-item high">
+        <div class="card">
+
+          <h3 class="todo-title"> <span class="action">
+          <i class="material-icons md-36 icon-delete">delete</i>
+                    <i class="icon-checkbox-outline material-icons md-36 md-dark">check_box_outline_blank</i>
+                    <i class="icon-checkbox material-icons md-36 md-light">check_box</i>
+                  </span> 
+          <span class="title">Learn Angular </span></h3>
+
+          <p class="todo-description">
+
+            Build great modularize javascript apps with angular JS. </p>
+          <span class="todo-priority"> High </span>
+
+        </div>
+
+      </li>
+
+      <li class="todo-item new">
+        <div class="card">
+
+          <h3 class="todo-title"> <span class="action">
+                    <i class="complete material-icons md-36 md-light">add_circle_outline</i>
+                  </span> 
+          <span class="title">ADD A TODO</span></h3>
+
+        </div>
+
+      </li>
+
+
+    </ul>
+  </div>
+
+  <div class="todo-completed">
+    <ul class="todo-list-completed">
+      <h2> Completed Tasks </h2>
+      <li class="todo-item high">
+        <div class="icon-check">
+          <i class="pad-15 material-icons md-36 md-light">check_circle</i>
+        </div>
+
+        <div class="icon-delete">
+          <i class="pad-15 material-icons md-36 md-light">delete</i>
+        </div>
+        <div class="content">
+          Learn React
+        </div>
+      </li>
+      <li class="todo-item medium">
+        <div class="icon-check">
+          <i class="pad-15 material-icons md-36 md-light">check_circle</i>
+        </div>
+        <div class="icon-delete">
+          <i class="pad-15 material-icons md-36 md-light">delete</i>
+        </div>
+        <div class="content">
+          Learn node.js
+        </div>
+      </li>
+      <li class="todo-item low">
+        <div class="icon-check">
+          <i class="pad-15 material-icons md-36 md-light">check_circle</i>
+        </div>
+
+        <div class="icon-delete">
+          <i class="pad-15 material-icons md-36 md-light">delete</i>
+        </div>
+        <div class="content">
+          Learn Angular
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</body>
+<script src="index.js"></script>
+</html>
